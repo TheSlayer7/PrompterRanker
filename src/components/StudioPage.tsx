@@ -6,7 +6,7 @@ import { TokenVisualizer } from './TokenVisualizer';
 import { ScoreBreakdown } from './ScoreBreakdown';
 import { PromptOptimizer } from './PromptOptimizer';
 import { PROMPT_PRESETS } from '../services/presets';
-import { Eye, Sliders, Wand2, Sparkles, RotateCcw, Flame } from 'lucide-react';
+import { Eye, Sliders, Wand2, Sparkles, RotateCcw, Flame, ArrowDown, CheckCircle2 } from 'lucide-react';
 
 interface StudioPageProps {
   prompt: string;
@@ -55,11 +55,28 @@ export const StudioPage: React.FC<StudioPageProps> = ({
 
   return (
     <div className="studio-page-container">
+      <section className="studio-welcome">
+        <div>
+          <p className="eyebrow">Prompt workspace</p>
+          <h1>Write a prompt. Get a clear next step.</h1>
+          <p className="studio-welcome-copy">
+            Paste a prompt below to see its quality score, token count, and the safest improvements.
+          </p>
+        </div>
+        <div className="studio-steps" aria-label="How PrompterRanker works">
+          <div className="studio-step"><span>1</span><strong>Write</strong><small>Paste or type</small></div>
+          <ArrowDown className="studio-step-arrow" size={16} />
+          <div className="studio-step"><span>2</span><strong>Review</strong><small>Score & feedback</small></div>
+          <ArrowDown className="studio-step-arrow" size={16} />
+          <div className="studio-step"><span>3</span><strong>Improve</strong><small>Apply changes</small></div>
+        </div>
+      </section>
+
       {/* Quick Test Templates Row */}
       <div className="template-demos-bar">
         <div className="demos-label">
           <Flame size={13} color="var(--amber)" />
-          <span>Try Optimization Demos:</span>
+          <span>Start with an example</span>
         </div>
         <div className="demos-pills">
           {PROMPT_PRESETS.slice(0, 5).map((preset) => (
@@ -74,7 +91,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({
               }}
               title={preset.description}
             >
-              <span>{preset.title.split('(')[0].trim()}</span>
+              <span>{preset.title.replace(/^[^\w]+/, '').split('(')[0].trim()}</span>
             </button>
           ))}
         </div>
@@ -135,13 +152,20 @@ export const StudioPage: React.FC<StudioPageProps> = ({
 
       {/* Secondary Tabs */}
       <div className="studio-secondary-section">
+        <div className="section-intro">
+          <div>
+            <p className="eyebrow">After your first pass</p>
+            <h2>Understand and improve your prompt</h2>
+          </div>
+          <span><CheckCircle2 size={14} /> Changes are suggestions — your original stays safe</span>
+        </div>
         <nav className="tabs-nav" id="studio-sub-tabs">
           <button
             className={`tab-btn ${activeTab === 'optimizer' ? 'active' : ''}`}
             onClick={() => setActiveTab('optimizer')}
           >
             <Wand2 size={15} />
-            <span>1-Click Diff & Savings (-{optimization.tokensSaved} tokens)</span>
+            <span>Improve prompt <em>{optimization.tokensSaved > 0 ? `Save ${optimization.tokensSaved} tokens` : 'Review suggestions'}</em></span>
           </button>
 
           <button
@@ -149,7 +173,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({
             onClick={() => setActiveTab('breakdown')}
           >
             <Sliders size={15} />
-            <span>Criteria Breakdown & Suggestions ({score.suggestions.length})</span>
+            <span>Why this score <em>{score.suggestions.length} suggestions</em></span>
           </button>
 
           <button
@@ -157,7 +181,7 @@ export const StudioPage: React.FC<StudioPageProps> = ({
             onClick={() => setActiveTab('visualizer')}
           >
             <Eye size={15} />
-            <span>Visual Token Chunks ({tokenCount})</span>
+            <span>See tokens <em>{tokenCount} total</em></span>
           </button>
         </nav>
 

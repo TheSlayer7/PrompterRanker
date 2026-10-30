@@ -2478,3 +2478,143 @@ body {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+/* Clear first-run path */
+.studio-welcome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 4px 2px 2px;
+}
+
+.eyebrow {
+  margin-bottom: 5px;
+  color: var(--primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.studio-welcome h1 {
+  color: var(--text-main);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.studio-welcome-copy {
+  max-width: 520px;
+  margin-top: 7px;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+}
+
+.studio-steps {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.studio-step {
+  display: grid;
+  grid-template-columns: 22px auto;
+  column-gap: 7px;
+  align-items: center;
+  min-width: 92px;
+}
+
+.studio-step span {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border-medium);
+  border-radius: 50%;
+  color: var(--text-main);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.studio-step strong {
+  color: var(--text-main);
+  font-size: 0.75rem;
+  line-height: 1.1;
+}
+
+.studio-step small {
+  font-size: 0.65rem;
+  line-height: 1.1;
+}
+
+.studio-step-arrow {
+  color: var(--border-medium);
+}
+
+.section-helper {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.editor-title-wrap {
+  align-items: flex-start;
+}
+
+.section-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 4px 2px 0;
+}
+
+.section-intro h2 {
+  color: var(--text-main);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-intro > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.tab-btn em {
+  margin-left: 3px;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .studio-welcome {
+    display: block;
+  }
+
+  .studio-steps {
+    margin-top: 16px;
+    justify-content: space-between;
+  }
+
+  .studio-step {
+    min-width: 0;
+  }
+
+  .section-intro {
+    display: block;
+  }
+
+  .section-intro > span {
+    margin-top: 7px;
+  }
+}

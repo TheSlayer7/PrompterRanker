@@ -86,7 +86,7 @@ export const TopNav: React.FC<TopNavProps> = ({
           onClick={() => handleSelectPage('tokens')}
         >
           <Hash size={14} />
-          <span>Token Lab</span>
+          <span>Tokens</span>
         </button>
 
         <button
@@ -102,7 +102,7 @@ export const TopNav: React.FC<TopNavProps> = ({
           onClick={() => handleSelectPage('library')}
         >
           <BookOpen size={14} />
-          <span>Templates</span>
+          <span>Library</span>
           {savedCount > 0 && <span className="tab-pill-badge">{savedCount}</span>}
         </button>
 
@@ -111,7 +111,7 @@ export const TopNav: React.FC<TopNavProps> = ({
           onClick={() => handleSelectPage('cost')}
         >
           <DollarSign size={14} />
-          <span>Cost Matrix</span>
+          <span>Costs</span>
         </button>
 
         <button

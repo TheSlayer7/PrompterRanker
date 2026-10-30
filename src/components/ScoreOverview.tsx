@@ -72,7 +72,10 @@ export const ScoreOverview: React.FC<ScoreOverviewProps> = ({ score, onOptimizeC
       <div className="editor-header">
         <div className="editor-title-wrap">
           <Award size={18} color="var(--purple)" />
-          <h2 className="section-title">Prompt Efficiency & Quality Score</h2>
+          <div>
+            <h2 className="section-title">Your score</h2>
+            <p className="section-helper">A quick estimate of clarity, structure, and efficiency.</p>
+          </div>
         </div>
       </div>
 

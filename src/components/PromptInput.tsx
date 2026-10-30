@@ -43,7 +43,10 @@ export const PromptInput: React.FC<PromptInputProps> = ({
       <div className="editor-header">
         <div className="editor-title-wrap">
           <FileText size={16} color="var(--primary)" />
-          <h2 className="section-title">Prompt Editor & Analyzer</h2>
+          <div>
+            <h2 className="section-title">Your prompt</h2>
+            <p className="section-helper">Write what you want the AI to do, then review the results on the right.</p>
+          </div>
         </div>
 
         <div className="editor-actions">
@@ -87,7 +90,7 @@ export const PromptInput: React.FC<PromptInputProps> = ({
         className="prompt-textarea"
         value={prompt}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Type or paste your prompt here to instantly score efficiency, count exact tokens across models, inspect visual token chunks, and get actionable improvement suggestions..."
+        placeholder="Paste or type your prompt here..."
         spellCheck="false"
       />
 
