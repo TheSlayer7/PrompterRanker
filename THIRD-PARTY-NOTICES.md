@@ -48,7 +48,7 @@ Notable transitive packages include:
 
 Vite also distributes a bundled artifact notice in [`node_modules/vite/LICENSE.md`](./node_modules/vite/LICENSE.md). That notice includes BSD-2-Clause and CC0-1.0 material from components bundled with the Vite toolchain. These licenses are not separate root npm dependencies in this project; they are included in Vite's own attribution notice.
 
-`lightningcss` is a development/build dependency. It is not imported by the application source and is not required by the deployed browser bundle.
+`lightningcss` is a development/build dependency and is not imported by the application source.
 
 ## License texts and attribution
 

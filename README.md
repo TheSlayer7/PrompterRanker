@@ -16,7 +16,7 @@ Measure prompt quality, inspect token structure, compare estimated usage, and ap
 
 ## Overview
 
-PrompterRanker is a client-side React application for evaluating and refining prompts before they are used in an AI workflow.
+PrompterRanker is a client-side React application for evaluating and refining prompts before they are used in an AI workflow. All scoring, tokenization, and optimization run locally in the browser; the app does not call an external API or LLM.
 
 > **A fun educational project:** PrompterRanker is built for learning, experimentation, and exploring prompt quality and tokenization concepts. Its scores, estimates, and optimization suggestions are practical heuristics rather than authoritative measurements.
 
@@ -197,4 +197,4 @@ You may use, copy, modify, merge, publish, distribute, sublicense, and sell copi
 
 Third-party dependency attribution is summarized in [THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md). Dependencies retain their own licenses.
 
-The build toolchain includes `lightningcss` under MPL-2.0 as a transitive, build-time dependency of Vite. It is not application code and is not included as a runtime dependency in the deployed browser bundle.
+The build toolchain includes `lightningcss` under MPL-2.0 as a transitive, build-time dependency of Vite. It is not application code.
