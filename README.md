@@ -6,9 +6,6 @@
 
 Measure prompt quality, inspect token structure, compare estimated usage, and apply conservative local optimizations.
 
-[**Open the live demo →**](https://prompter-rankerapp.vercel.app/)
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-8b949e.svg)](./LICENSE)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-7-3178c6.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8-646cff.svg)](https://vite.dev/)
