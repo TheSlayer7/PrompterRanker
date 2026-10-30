@@ -1,0 +1,26 @@
+# PrompterRanker Runtime & Environment Requirements
+# ===============================================
+# Note: PrompterRanker is a modern TypeScript + React + Vite client-side application.
+# The primary runtime is Node.js. If you are serving the production build using Python,
+# you can use Python 3.8+ with standard library (no pip packages required).
+
+# --- Primary Runtime Requirements ---
+# Node.js: >= 18.0.0 (Node 20+ LTS or Node 22+ recommended)
+# Package Manager: npm >= 9.0.0 (or pnpm / yarn)
+
+# --- Core Dependencies (managed via package.json) ---
+# react>=19.0.0
+# react-dom>=19.0.0
+# gpt-tokenizer>=4.1.0
+# lucide-react>=1.64.0
+# canvas-confetti>=1.9.4
+
+# --- Dev & Build Tooling ---
+# vite>=6.0.0
+# typescript>=5.0.0
+# @vitejs/plugin-react>=4.0.0
+# oxlint>=1.0.0
+
+# --- Optional Python Static Hosting (Alternative to 'npm run preview') ---
+# If you prefer to serve the production build (dist/) via Python:
+# Command: python -m http.server 5173 --directory dist
